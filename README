@@ -1,0 +1,9 @@
+Requirements:
+
+A Unix (or a Unix-like) system with sufficiently recent 
+GNU tools (gcc, make) installed, 
+along with Python (and Cython, which 
+is a semi-standard Python component).
+
+Tested with Python 3.4 and 2.7 on Linux (Gentoo) and FreeBSD 11.0
+
