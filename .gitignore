@@ -1,0 +1,6 @@
+*.so
+*.o
+dync
+build/
+m.c
+
