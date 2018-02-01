@@ -1,5 +1,6 @@
 CC=cc
 LFLAGS = -L. -Wl,-rpath=. -lcmean
+CFLAGS="-fvisibility=hidden"
 
 # uncomment the following for building universal libraries on MacOSX
 #CFLAGS = -arch ppc -arch i386
@@ -11,8 +12,11 @@ EXE=
 all:	dyn.so
 
 # building a shared C library libcmean.so 
-libcmean.so: cmean.c 
-	$(CC) $(CFLAGS) -fPIC -shared cmean.c -o libcmean.so
+libcmean.so: cmean.o
+	$(CC) $(LDFLAGS) -shared cmean.o -o libcmean.so
+
+cmean.o: cmean.c
+	$(CC) $(CFLAGS) -fPIC -c cmean.c -o cmean.o
 
 # building python extension calling a function from shared C library 
 dyn.so:	m.pyx libcmean.so setup.py
