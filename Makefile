@@ -32,6 +32,6 @@ runc: dync libcmean.so
 	./dync$(EXE)
 
 clean:
-	rm -rf core *.out *.o *.so *.pyc *.dSYM dync$(EXE) m.c *~ .* build/
+	rm -rf core *.out *.o *.so *.pyc *.dSYM dync$(EXE) m.c *~ build/
 
 
