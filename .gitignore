@@ -1,6 +1,7 @@
 *.so
 *.o
 dync
+dyncpp
 build/
 m.c
 

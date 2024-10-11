@@ -1,4 +1,4 @@
-double mean(int n, double* a) 
+double mean(int n, const double* a) 
 {
   double s;
   int i;
